@@ -21,7 +21,7 @@ class MyTimerService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
 
-        intent?.run { getIntExtra("", 10).let { startValue ->
+        intent?.run { getIntExtra(TIMER_KEY, 10).let { startValue ->
             startTimer(startValue)
         } }
 
